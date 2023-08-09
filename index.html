@@ -50,7 +50,28 @@
     }
 
     h1 {
+      background-color: var(--bg-light);
+      border-radius: 6px;
+      margin-bottom: 40px;
+      padding-left: 12px;
+    }
+
+    .prompt {
       color: var(--med);
+    }
+    .carat {
+      display: inline-block;
+      transform: scaleX(.5) scaleY(1.5);
+      margin-left: 10px;
+      position: relative;
+      top: 2px;
+    }
+    .cursor {
+      opacity: 0.6;
+      transition: opacity 75ms linear;
+    }
+    .cursor.hide {
+      opacity: 0;
     }
 
     hr {
@@ -107,7 +128,10 @@
   </style>
 
   <div class="col">
-    <h1>Official Website of TLock</h1>
+    <h1>
+      <span class="prompt">~<span class="carat">></span></span>
+      tlock.dev<span class="cursor">█</span>
+    </h1>
 
     <span>Find me at: <a href="https://armyofbees.com">Army of Bees</a> | <a href="https://github.com/t-lock">Github</a> | <a href="https://furanoavalanche.org">Furano Avalanche Center</a></span>
 
@@ -187,6 +211,12 @@
     </ul>
   </div>
 
+  <script>
+    const cursor = document.querySelector('.cursor');
+    setInterval(() => {
+      cursor.classList.toggle('hide');
+    }, 1000);
+  </script>
 
 </body>
 </html>

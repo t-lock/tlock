@@ -1,55 +1,192 @@
-<h1>Official Website of TLock</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tlock.dev</title>
+</head>
+<body>
 
-<h2>Tech I <em>care about</em>:</h2>
+  <style>
+    :root {
+      /* Rose Pine Moon */
+      --bg-dark: #232136;
+      --bg-light: #2a273f;
+      --bright: #f0bd75;
+      --light: #e0def4;
+      --med: #9ccfd8;
+      --dark: #c4a7e7;
+      --darker: #ea9a97;
+      --darkest: #3e8fb0;
+      --comment: #6e6a86;
+    }
 
-<ul>
-  <li>Svelte</li>
-  <li>Tauri</li>
-  <li>Lando</li>
-</ul>
+    body {
+      font-family: monospace;
+      margin: 20px;
+      background-color: var(--bg-light);
+      color: var(--light);
+      letter-spacing: 0.1em;
+      line-height: 1.5;
 
-<h2>Languages I am bullish on:</h2>
-<ul>
-  <li>Go</li>
-  <li>Elixir</li>
-  <li>Kotlin</li>
-  <li>Rust</li>
-  <li>Dart <small>(Well, sort of. Its complicated)</small></li>
-</ul>
+      display: flex;
+      justify-content: center;
+    }
 
-<h2>Languages I am currently using in production:</h2>
+    .col {
+      background-color: var(--bg-dark);
+      padding: 10px 30px;
+      border: 1px solid var(--darker);
+      border-radius: 6px;
+      box-shadow: 2px 2px 4px 4px var(--bg-dark);
+    }
 
-<ul>
-  <li>Typescript</li>
-  <li>Javascript</li>
-  <li>SQL</li>
-  <li>PHP</li>
-  <li>CSS</li>
-  <li>Sass</li>
-  <li>PostCSS</li>
-  <li>Go</li>
-  <li>Python</li>
-  <li>Ruby</li>
-</ul>
+    em {
+      color: var(--bright);
+    }
 
-<h2>Tech / Frameworks / Platforms I am currently using in production:</h2>
+    small {
+      color: var(--comment);
+    }
 
-<ul>
-  <li>Svelte</li>
-  <li>React</li>
-  <li>MobX + vanilla JS</li>
-  <li>Node</li>
-  <li>Deno</li>
-  <li>Supabase</li>
-  <li>Firebase</li>
-  <li>Hasura</li>
-  <li>Hugo</li>
-  <li>Netlify CMS</li>
-  <li>Gatsby</li>
-  <li>Ruby on Rails</li>
-  <li>FastAPI</li>
-  <li>Kirby CMS</li>
-  <li>Wordpress</li>
-  <li>Vite</li>
-  <li>Webpack</li>
-</ul>
+    h1 {
+      color: var(--med);
+    }
+
+    hr {
+      border-color: var(--comment);
+      opacity: 0.5;
+      margin: 40px 0;
+    }
+
+    .note {
+      color: var(--darkest);
+      font-size: 1.2em;
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-left: -20px;
+    }
+
+    li + .note {
+      margin-top: 20px;
+    }
+
+    span,
+    li {
+      font-size: 1.2em;
+      padding: 4px 0;
+      list-style: square;
+      color: var(--dark);
+    }
+
+    a {
+      color: var(--darker);
+      display: inline-block;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    a:hover {
+      opacity: 0.7;
+    }
+    a:focus,
+    a:focus-within,
+    a:focus-visible {
+      opacity: 0.7;
+      outline: none;
+      background-color: var(--bg-light);
+    }
+
+    @media (max-width: 580px) {
+      body {
+        margin: 0;
+      }
+      .col {
+        border: 0;
+      }
+    }
+  </style>
+
+  <div class="col">
+    <h1>Official Website of TLock</h1>
+
+    <span>Find me at: <a href="https://armyofbees.com">Army of Bees</a> | <a href="https://github.com/t-lock">Github</a></span>
+
+    <hr>
+
+    <h2>Tech I <em>care about</em>:</h2>
+
+    <ul>
+      <li>Linux</li>
+      <li>Lando</li>
+      <li>Svelte</li>
+      <li>Tauri</li>
+    </ul>
+
+    <hr>
+
+    <h2>Languages I am <em>bullish on</em>:</h2>
+    <ul>
+      <li>Go</li>
+      <li>Elixir</li>
+      <li>Kotlin</li>
+      <li>Rust</li>
+      <li>Dart <small>(Well, sort of. Its complicated)</small></li>
+    </ul>
+
+    <hr>
+
+    <h2>Languages I am <em>using in production</em>:</h2>
+
+    <ul>
+      <strong class="note">@ front-end</strong>
+      <li>Typescript</li>
+      <li>Javascript</li>
+      <li>CSS</li>
+      <li>Sass</li>
+      <li>PostCSS</li>
+      <strong class="note">@ back-end</strong>
+      <li>SQL/plpgsql</li>
+      <li>Go</li>
+      <li>Python</li>
+      <li>Typescript</li>
+      <li>Ruby</li>
+      <li>PHP</li>
+    </ul>
+
+    <hr>
+
+    <h2>Tech / Frameworks / Platforms <small>etc</small> I am <em>using in production</em>:</h2>
+
+    <ul>
+      <strong class="note">@ front-end</strong>
+      <li>Svelte</li>
+      <li>React</li>
+      <li>MobX + vanilla JS</li>
+      <strong class="note">@ back-end</strong>
+      <li>Node</li>
+      <li>Deno</li>
+      <li>FastAPI</li>
+      <strong class="note">@ cloud db / serverless</strong>
+      <li>Supabase</li>
+      <li>Firebase</li>
+      <li>AWS <small>...too many to list</small></li>
+      <li>Hasura</li>
+      <strong class="note">@ ssg / headless</strong>
+      <li>Hugo</li>
+      <li>Netlify CMS</li>
+      <li>Gatsby</li>
+      <strong class="note">@ monolith</strong>
+      <li>Ruby on Rails</li>
+      <li>Wordpress</li>
+      <li>Kirby CMS</li>
+      <strong class="note">@ toolchain</strong>
+      <li>Vite</li>
+      <li>Webpack</li>
+      <li>Rollup</li>
+      <li>Parcel</li>
+    </ul>
+  </div>
+
+
+</body>
+</html>

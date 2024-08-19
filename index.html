@@ -38,6 +38,7 @@
         border: 1px solid var(--darker);
         border-radius: 6px;
         box-shadow: 2px 2px 4px 4px var(--bg-dark);
+        max-width: 720px;
       }
 
       em {
@@ -99,6 +100,12 @@
         color: var(--dark);
       }
 
+      p {
+        color: var(--dark);
+        font-size: 1.2em;
+        line-height: 1.8;
+      }
+
       a {
         color: var(--darker);
         display: inline-block;
@@ -140,7 +147,29 @@
 
       <hr />
 
-      <h2>Tech I <em>care about</em>:</h2>
+      <h2>Current <em>Passion Project</em>:</h2>
+
+      <!-- prettier-ignore -->
+      <span>
+        <strong>Sveltempl</strong>
+        (<a href="https://github.com/t-lock/sveltempl">Github</a>)
+        (<a href="https://sveltempl.tlock.dev">Demo</a>)
+      </span>
+
+      <br /><br />
+
+      <p>
+        <strong><em>Sveltempl</em></strong> is a small library and toolkit for
+        seamlessly integrating Svelte with Go Templ. It allows you to
+        server-render your svelte components directly within your Golang backend
+        via an embedded v8 isolate, while surgically hydrating them on the
+        front-end. Its flippin' awesome, and paired with HTMX, is exactly the
+        stack <em>I wanted.</em> You might like it too!
+      </p>
+
+      <hr />
+
+      <h2>Tech I <em>care deeply about</em>:</h2>
 
       <ul>
         <li>Linux</li>

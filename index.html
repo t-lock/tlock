@@ -384,9 +384,8 @@
           this.delayed = { x: x, y: y };
 
           this.update = function () {
-            this.delayed.x += (mouse.x - this.delayed.x) * 0.15;
-            this.delayed.y += (mouse.y - this.delayed.y) * 0.15;
-            this.draw();
+            this.delayed.x += (mouse.x - this.delayed.x) * 0.05;
+            this.delayed.y += (mouse.y - this.delayed.y) * 0.05;
           };
         }
         const pointer = new Pointer(mouse.x, mouse.y);

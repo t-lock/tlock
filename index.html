@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -154,9 +154,20 @@
       </h1>
 
       <span>
-        Find me at: <a href="https://armyofbees.com">Army of Bees</a> |
-        <a href="https://furanoavalanche.org">Furano Avalanche Center</a> |
-        <a href="https://github.com/t-lock">Github</a>
+        Find me at:
+        <a href="https://armyofbees.com" target="_blank">Army of Bees</a>
+        <span> | </span>
+        <a href="https://furanoavalanche.org" target="_blank">
+          Furano Avalanche Center
+        </a>
+        <span> | </span>
+        <a href="https://svelte.surf" target="_blank">@SURF</a>
+        <span> | </span>
+        <a href="https://widget-quest.neocities.org/" target="_blank">
+          widget.quest
+        </a>
+        <span> | </span>
+        <a href="https://github.com/t-lock" target="_blank">Github</a>
       </span>
 
       <hr />
@@ -176,7 +187,14 @@
         <strong>Writing an interpreter in Zig</strong>
       </p>
       <p>
-        I'm following along with Thorsten Ball's excellent book: <em>Writing an Interpreter in Go</em>, but implementing everything in Zig. Zig is a very cool language and an excellent introduction to manual memory management through its unique use of typed allocators. Ball never claimed his Monkey-language compiler was optimized for performance (quite the opposite), so Zig's memory management patterns have presented obvious opportunities to re-think things: "Is there a way to do this bit <em>without</em> heap allocations? Fun.
+        I'm following along with Thorsten Ball's excellent book:
+        <em>Writing an Interpreter in Go</em>, but implementing everything in
+        Zig. Zig is a very cool language and an excellent introduction to manual
+        memory management through its unique use of typed allocators. Ball never
+        claimed his Monkey-language compiler was optimized for performance
+        (quite the opposite), so Zig's memory management patterns have presented
+        obvious opportunities to re-think things: "Is there a way to do this bit
+        <em>without</em> heap allocations? Fun.
       </p>
       <hr />
 
@@ -307,12 +325,12 @@
             c.beginPath();
             c.moveTo(
               this.x + this.radius * Math.sin(0),
-              this.y + this.radius * Math.cos(0)
+              this.y + this.radius * Math.cos(0),
             );
             for (var side = 0; side < 7; side++) {
               c.lineTo(
                 x + this.radius * Math.sin((side * 2 * Math.PI) / 6),
-                y + this.radius * Math.cos((side * 2 * Math.PI) / 6)
+                y + this.radius * Math.cos((side * 2 * Math.PI) / 6),
               );
             }
             c.strokeStyle = med;

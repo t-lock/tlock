@@ -53,6 +53,11 @@
         max-width: 720px;
       }
 
+      strong > strong {
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+
       em {
         color: var(--bright);
       }
@@ -90,6 +95,17 @@
         border-color: var(--comment);
         opacity: 0.5;
         margin: 40px 0;
+      }
+
+      hr.mini {
+        width: calc(100% - 200px);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      strong.mini {
+        color: var(--darkest);
       }
 
       .note {
@@ -172,19 +188,108 @@
 
       <hr />
 
-      <h2>Current <em>Passion Project</em>:</h2>
-
-      <!-- prettier-ignore -->
-      <!--<span>
-        <strong>Sveltempl</strong>
-        (<a href="https://github.com/t-lock/sveltempl">Github</a>)
-        (<a href="https://sveltempl.tlock.dev">Demo</a>)
-      </span>
-
-      <br /><br />-->
+      <h2>Current <em>Passion Projects</em>:</h2>
 
       <p>
-        <strong>Writing an interpreter in Zig</strong>
+        <strong class="mini"> widget.quest </strong>
+      </p>
+
+      <div style="padding-left: 20px">
+        <p>
+          Installing 3rd party iframes for chats, guestbooks, oekaki boards, etc
+          is great, but what if you could build your own?
+        </p>
+        <p>
+          The mission of
+          <a href="https://widget-quest.neocities.org/" target="_blank">
+            widget.quest
+          </a>
+          is to empower <strong><em>YOU</em></strong> to build a cooler web, by
+          giving you tools to build your own <em>dynamic widgets</em> with
+          <em>persistent data</em> for your Neocities, Nekoweb, or any other
+          website!
+        </p>
+        <p>
+          Go deeper with PHP, a database, and even realtime sockets to
+          <em>build whatever you want!</em>
+        </p>
+        <p>
+          <em>Start small</em> with a visit counter, comments form, etc. Copy
+          pre-made templates and <em>tweak</em> them to make them your own,
+          <em>learn by doing</em>, and share your widgets/code with others.
+        </p>
+        <p>
+          There is no limit to what you can build once you grow your skills.
+          Make surveys, realtime chat applets. Collaborative, multiplayer puzzle
+          games. Create a shared widget with other sites in your community to
+          build systems that work <em>across sites</em>. A passport stamp
+          system? You are only limited by your imagination!
+        </p>
+      </div>
+
+      <hr class="mini" />
+
+      <p>
+        <strong class="mini">
+          A <strong>U</strong>niversal <strong>R</strong>endering
+          <strong>F</strong>ramework (for <strong>S</strong>velte) ->
+          <a href="https://svelte.surf" target="_blank">SURF</a>
+        </strong>
+      </p>
+      <div style="padding-left: 20px">
+        <p>
+          This is the spiritual successor to Svelte-Archipelago
+          <span style="white-space: nowrap">
+            (<a href="https://github.com/t-lock/svelte-archipelago">Github</a>),
+          </span>
+          which was the spiritual successor to SvelTempl
+          <span style="white-space: nowrap">
+            (<a href="https://github.com/t-lock/sveltempl">Github</a>)
+          </span>
+          <span style="white-space: nowrap">
+            (<a href="https://sveltempl.tlock.dev">Demo</a>).
+          </span>
+        </p>
+        <p>
+          SvelTempl proved that we could do Svelte SSR embedded in Go, by
+          embedding V8 into the go webserver. It kicked off this journey. It was
+          based on Svelte 4, and was limited to Go as a host language. It was
+          powerful but difficult to deploy.
+        </p>
+        <p>
+          Svelte Archipelago took the concept in a different direction. Updated
+          for Svelte 5, and made 'universal', it was based on a tiny nodejs
+          sidecar to your host application, easily managed with premade Docker
+          image, and npm tooling for bootstrapping. It was submitted for Svelte
+          Hackathon. It worked well, but just wasn't that exciting (running Node
+          alongside your application)...
+        </p>
+        <p>
+          SURF is the culmination of these ideas. It goes in a new direction,
+          leveraging WASM and an embedded JS runtime to be both embedded
+          directly into your application, AND universally portable for any
+          backend language. Svelte components are AOT compiled to
+          <a href="https://bellard.org/quickjs/" target="_blank">QuickJS</a>
+          <em>bytecode</em>, such that they can be rendered from an embedded
+          Zig-built WebAssembly renderer running inside your application.
+        </p>
+        <p>
+          Not only that, but SURF also does cross-language type generation
+          giving you end to end type safety and generates a thin api in your
+          host language letting you discover and autocomplete your components
+          directly in your templates. Acheiving cross-language, typesafe,
+          embedded Svelte SSR, is a matter of installing a library!
+        </p>
+        <p>
+          The goal: drop-in Svelte SSR + hydration for any language that can run
+          wasm. Go is the reference implementation, with more to come.
+        </p>
+      </div>
+
+      <hr class="mini" />
+
+      <p>
+        <strong class="mini">Writing an interpreter in Zig</strong>
       </p>
       <p>
         I'm following along with Thorsten Ball's excellent book:
@@ -196,6 +301,7 @@
         obvious opportunities to re-think things: "Is there a way to do this bit
         <em>without</em> heap allocations? Fun.
       </p>
+
       <hr />
 
       <h2>Tech I <em>truly care about</em>:</h2>
